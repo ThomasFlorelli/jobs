@@ -4,13 +4,12 @@ Chef Amit is confronted to a big problem: due to his incredible number of bookin
 He would like a web application to help him manage an inventory of all the ingredients he posseses.
 
 Build a small application to help chef Amit manage his stock.
-He is not really interested in a beautiful app, he just needs something simple and functional.
 He wants to be able to:
 - add ingredients to his inventory
 - deal with quantities
 - change the name of his ingredients in case he mispelled it
 - remove the ingredients he has already used for cooking
-
+He likes his applications to be intuitive :)
 
 ### Constraints
 
