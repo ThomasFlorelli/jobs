@@ -14,13 +14,16 @@ class IngredientAddForm extends React.Component {
 
     addIngredient (e) {
         e.preventDefault()
+        
         actions.addIngredient(this.state)
     }
 
     handleInputChange (e) {
         e.preventDefault()
         const name = e.target.name
-        if (e.target.value < 0) {
+        const value = e.target.value
+
+        if (e.target.name == "value" && e.target.value < 0) {
             const value = 0
         } else {
             const value = e.target.value
@@ -32,7 +35,7 @@ class IngredientAddForm extends React.Component {
         return (
             <form onSubmit={this.addIngredient.bind(this)}>
                   <div>
-                      <label htmlFor="name">School Name:</label>
+                      <label htmlFor="name">Ingredient name:</label>
                       <input type="text" id="name" name="name" value={this.state.name} onChange={this.handleInputChange.bind(this)} placeholder="Ingredient name" />
                   </div>
                   <div>

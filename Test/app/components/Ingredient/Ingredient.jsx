@@ -7,17 +7,20 @@ class Ingredient extends React.Component {
         this.state = {
             id: this.props.id,
             name: this.props.name,
-            value: this.props.value
+            value: this.props.value,
+            quantifiable: this.props.quantifiable
         }
     }
 
     increaseNumber (e) {
         e.preventDefault()
+
         actions.increaseNumber(this.state)
     }
 
     decreaseNumber (e) {
         e.preventDefault()
+        
         actions.decreaseNumber(this.state)
     }
 

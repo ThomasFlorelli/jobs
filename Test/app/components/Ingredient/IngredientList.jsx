@@ -9,8 +9,8 @@ class IngredientList extends React.Component {
                     this.props.ingredients.map(function (i,index) {
                         return(
                             <EditableIngredient
-                                key={i.id}
-                                id={i.id}
+                                key={i._id}
+                                id={i._id}
                                 name={i.name}
                                 quantifiable={i.quantifiable}
                                 value={i.value}

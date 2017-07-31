@@ -30,7 +30,7 @@ function decreaseIngredientNumber (ingredient) {
 
 module.exports = {
     addIngredient: addIngredient,
-    changeName: changeIngredientName,
+    changeIngredientName: changeIngredientName,
     increaseNumber: increaseIngredientNumber,
     decreaseNumber: decreaseIngredientNumber
 }

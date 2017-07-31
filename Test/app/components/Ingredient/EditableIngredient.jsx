@@ -12,6 +12,7 @@ class EditableIngredient extends React.Component {
 
     handleEditClick (e) {
         e.preventDefault()
+        
         this.setState({editFormOpen: true})
     }
 

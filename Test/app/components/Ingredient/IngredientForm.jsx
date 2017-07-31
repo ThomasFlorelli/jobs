@@ -12,12 +12,14 @@ class IngredientForm extends React.Component {
 
     handleNameChange (e) {
         e.preventDefault()
+
         this.setState({name: e.target.value})
     }
 
     changeName (e) {
         e.preventDefault()
-        actions.changeName(this.state)
+        
+        actions.changeIngredientName(this.state)
         this.props.onFormClose()
     }
 
@@ -30,7 +32,7 @@ class IngredientForm extends React.Component {
                 </div>
                 <div>
                     <button onClick={this.changeName.bind(this)}>Edit name</button>
-                    <button>Cancel</button>
+                    <button onClick={this.props.onFormClose}>Cancel</button>
                 </div>
             </div>
         )
