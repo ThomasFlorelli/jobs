@@ -8,7 +8,7 @@ $ npm install
 $ mongo
     > load(pathTo/Test/server/script/fill_ingredients.js)
     > run()
-$ exit
+    > exit
 $ npm start
 
 ```
