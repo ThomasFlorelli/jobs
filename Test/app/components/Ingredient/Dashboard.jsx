@@ -6,11 +6,11 @@ class Dashboard extends React.Component {
     render () {
         return (
             <div>
-                <div>
+                <div className="content">
+                    <IngredientAddForm />
                     <IngredientList
                         ingredients={this.props.ingredients}
                     />
-                    <IngredientAddForm />
                 </div>
             </div>
         )

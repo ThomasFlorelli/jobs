@@ -12,7 +12,7 @@ class EditableIngredient extends React.Component {
 
     handleEditClick (e) {
         e.preventDefault()
-        
+
         this.setState({editFormOpen: true})
     }
 
@@ -23,25 +23,21 @@ class EditableIngredient extends React.Component {
     render () {
         if (this.state.editFormOpen) {
             return (
-                <div>
-                    <IngredientForm
-                      id={this.props.id}
-                      name={this.props.name}
-                      onFormClose={this.handleFormClose.bind(this)}
-                    />
-                </div>
+                <IngredientForm
+                    id={this.props.id}
+                    name={this.props.name}
+                    onFormClose={this.handleFormClose.bind(this)}
+                />
             )
         } else {
             return (
-                <div>
-                    <Ingredient
-                        id={this.props.id}
-                        name={this.props.name}
-                        value={this.props.value}
-                        quantifiable={this.props.quantifiable}
-                        onEditClick={this.handleEditClick.bind(this)}
-                    />
-                </div>
+                <Ingredient
+                    id={this.props.id}
+                    name={this.props.name}
+                    value={this.props.value}
+                    quantifiable={this.props.quantifiable}
+                    onEditClick={this.handleEditClick.bind(this)}
+                />
             )
         }
     }

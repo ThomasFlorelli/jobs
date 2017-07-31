@@ -14,7 +14,7 @@ class IngredientAddForm extends React.Component {
 
     addIngredient (e) {
         e.preventDefault()
-        
+
         actions.addIngredient(this.state)
     }
 
@@ -34,17 +34,19 @@ class IngredientAddForm extends React.Component {
     render () {
         return (
             <form onSubmit={this.addIngredient.bind(this)}>
-                  <div>
+                  <div className="div-label">
                       <label htmlFor="name">Ingredient name:</label>
+                  </div>
+                  <div>
                       <input type="text" id="name" name="name" value={this.state.name} onChange={this.handleInputChange.bind(this)} placeholder="Ingredient name" />
                   </div>
-                  <div>
+                  <div className="div-label">
                       <label htmlFor="number">Number:</label>
+                  </div>
+                  <div className="div-second-input">
                       <input type="number" id="number" name="value" value={this.state.value} onChange={this.handleInputChange.bind(this)} placeholder="Ingredient number" />
                   </div>
-                  <div>
-                      <button type="submit">Add Ingredient</button>
-                  </div>
+                  <button className="btn btn-primary btn-sm" type="submit">Add Ingredient</button>
             </form>
         )
     }

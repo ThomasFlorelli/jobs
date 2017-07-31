@@ -18,21 +18,20 @@ class IngredientForm extends React.Component {
 
     changeName (e) {
         e.preventDefault()
-        
+
         actions.changeIngredientName(this.state)
         this.props.onFormClose()
     }
 
     render () {
         return (
-            <div>
-                <div>
-                    <label>Name</label>
+            <div className="div-global">
+                <div className="div-name-edit">
                     <input type="text" value={this.state.name} onChange={this.handleNameChange.bind(this)} />
                 </div>
-                <div>
-                    <button onClick={this.changeName.bind(this)}>Edit name</button>
-                    <button onClick={this.props.onFormClose}>Cancel</button>
+                <div className="div-value">
+                    <button className="btn btn-secondary btn-sm" onClick={this.changeName.bind(this)}>Edit name</button>
+                    <button className="btn btn-secondary btn-sm" onClick={this.props.onFormClose}>Cancel</button>
                 </div>
             </div>
         )
